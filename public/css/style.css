@@ -1,0 +1,195 @@
+
+*{
+    box-sizing: border-box;
+  }
+  p{
+    margin: 0;
+  }
+  
+  body{
+    background:#000000;
+    color:#000000;
+    line-height: 1.6;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    padding:1em;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .container{
+    max-width:560px;
+    margin-left:auto;
+    margin-right:auto;
+    padding:1em;
+  }
+  
+  ul{
+    list-style: none;
+    padding:0;
+  }
+  
+  .brand{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    
+  }
+  .brand_logo{
+    /* text-align: center; */
+    width: 200px;
+    height: 100px;
+  }
+  
+  .brand span{
+    color:#fff;
+  }
+  
+  .wrapper{
+    box-shadow: 0 0 20px 0 rgba(72,94,116,0.7);
+    background-color: #fff;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  
+  .wrapper > *{
+    /* padding: 1em; */
+  }
+  .active{
+    margin: auto;
+  }
+  .carousel-item{
+    float: center;
+    /* display: flex; */
+    /* justify-content: center; */
+  }
+  .carousel-image{
+    
+    /* margin: auto; */
+
+  }
+  .zamovlenya_header{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    border-bottom: 1px solid #000000;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    /* padding-bottom: 20px; */
+  }
+  .carousel-indicators{
+    position: relative;
+  }
+  .journal-count{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px ;
+  }
+  .journal-price{
+    margin-top: 10px;
+  }
+  .fa{
+    padding: 0 10px;
+  }
+  .zamovlenya{
+    border-bottom: 1px solid #000000;
+  }
+  .journal-description p{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .journal-price{
+    display: flex;
+    justify-content: center;
+  }
+  .price{
+    display: flex;
+    justify-content: flex-end;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .journal-price__text{
+    margin-left: 5px;
+  }
+  .company-info{
+    background:#c9e6ff;
+  }
+  .company{
+    background-color: #fff;
+  }
+  
+  .company-info h3, .company-info ul{
+    text-align: center;
+    margin:0 0 1rem 0;
+  }
+  
+  .contact{
+    background:#f9feff;
+  }
+  
+  /* FORM STYLES */
+  .contact form{
+    /* display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap:20px; */
+  }
+  
+  .contact form label{
+    display:block;
+    font-size: 14px;
+  }
+  
+  .contact form p {
+    margin-bottom: 10px;
+    margin-top: 20px;
+    
+
+  }
+  .poshta_description{
+    font-size: 12px;
+  }
+  
+  .contact form .full{
+    grid-column: 1 / 3;
+  }
+  
+  .contact form button, .contact form input, .contact form textarea{
+    width:100%;
+    padding:0.5em;
+    border:1px solid #c9e6ff;
+  }
+  
+  .contact form button{
+    background: #000;
+    color: #fff;
+    font-weight: 700;
+    border:0;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  
+  .contact form button:hover,.contact form button:focus{
+    background:#92bde7;
+    color:#fff;
+    outline:0;
+    transition: background-color 2s ease-out;
+  }
+  
+  /* LARGE SCREENS */
+  @media(min-width:700px){
+    /* .wrapper{
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+    }
+  
+    .wrapper > *{
+      padding:2em;
+    } */
+  
+    .company-info h3, .company-info ul, .brand{
+      text-align: left;
+    }
+  }
