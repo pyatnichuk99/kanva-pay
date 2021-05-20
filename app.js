@@ -53,8 +53,8 @@ app.post('/send', (req, res) => {
     // }
     service: 'gmail',
     auth:{
-        user: 'mikolapyatnichuk@gmail.com',
-        pass: 'kpyatnichuk1999'
+        user: process.env.USER,
+        pass: process.env.PASS
     }
   });
 
