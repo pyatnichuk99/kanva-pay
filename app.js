@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const exphbs = require('express-handlebars');
+require('dotenv').config();
 const path = require('path');
 const nodemailer = require('nodemailer');
 
@@ -41,21 +42,18 @@ app.post('/send', (req, res) => {
 
   // create reusable transporter object using the default SMTP transport
   let transporter = nodemailer.createTransport({
-    // host: 'smtp.ethereal.email',
-    // port: 587,
-    // secure: false, // true for 465, false for other ports
-    // auth: {
-    //     user: 'garett.marks@ethereal.email', // generated ethereal user
-    //     pass: 'DCrda9mtVyd1drRCsp'  // generated ethereal password
-    // },
-    // tls:{
-    //   rejectUnauthorized:false
-    // }
-    service: 'gmail',
-    auth:{
-        user: process.env.USER,
-        pass: process.env.PASS
-    }
+
+    pool: true,
+
+    service: 'Gmail',
+    secure: false,
+    auth: {
+        type: 'OAuth2',
+        user: process.env.EMAIL, // generated ethereal user
+        refreshToken: process.env.EMAIL_REFRESH_TOKEN,
+        clientId: process.env.EMAIL_CLIENT_ID,
+        clientSecret: process.env.EMAIL_CLIENT_SECRET
+    },
   });
 
   // setup email data with unicode symbols
@@ -79,4 +77,4 @@ app.post('/send', (req, res) => {
   });
   });
 
-app.listen(process.env.PORT || 3000, () => console.log('Server started...'));
+app.listen(process.env.PORT, () => console.log('Server started...'));
