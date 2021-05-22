@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const price = document.querySelector('.journal-price__text').innerHTML;
     let count = document.querySelector('.journal-count__text').innerHTML;
     let total = document.querySelector('.total').innerHTML;
+    let myModal = document.getElementById('myModal');
+    
 
     const plus = document.querySelector('.fa-plus-circle');
 
@@ -56,3 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 })
+
+$(document).ready(function(){
+    $('#phone').mask('+380 (00)-00-00-000');
+  });
