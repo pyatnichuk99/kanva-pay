@@ -10,9 +10,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="../public/css/style.css">
+
   <script src="../public/js/index.js"></script>
 
 </head>
@@ -45,17 +48,25 @@
               <div class="carousel-item">
                 <img class="carousel-image w-100" src="../public/img/4.jpg" class="d-block " alt="...">
               </div>
+              <div class="carousel-item">
+                <img class="carousel-image w-100" src="../public/img/5.jpg" class="d-block " alt="...">
+              </div>
+              <div class="carousel-item">
+                <img class="carousel-image w-100" src="../public/img/6.jpg" class="d-block " alt="...">
+              </div>
             </div> 
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
               <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
               <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
               <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 4"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="5" aria-label="Slide 5"></button>
             </div>           
           </div>
           <div class="journal">
             <div class="journal-description">
-              <p>Журнал KANVA</p>
+              <p>Журнал KANVA 1 випуск</p>
             </div>
             <div class="journal-price">
               <p class="journal-price__text">500 </p>
@@ -79,7 +90,7 @@
         <form method="POST" action="send">
           <p>
             <label>Ваше ім’я та прізвище</label>
-            <input type="text" name="name" required>
+            <input type="text" name="name" required >
           </p>
           <p>
             <label>Ваш e-mail</label>
@@ -87,7 +98,7 @@
           </p>
           <p>
             <label>Ваш контактний телефон</label>
-            <input type="phone" name="phone" required>
+            <input id="phone" type="phone" name="phone" required>
           </p>
           <p class="poshta_description">
             Доставка Новою поштою (в відділення / поштомат / курєром оплачується відповідно до тарифів перевізника)
@@ -100,11 +111,42 @@
             <input type="text" name="total" class="total_price">
           </p>
           <p class="full">
-            <button class="send-form" type="submit">ЗАМОВИТИ</button>
+            <button data-bs-toggle="modal" data-bs-target="#exampleModal" class="send-form" type="submit">ЗАМОВИТИ</button>
           </p>
         </form>
       </div>
+      <div class="links">
+        <a href="https://www.instagram.com/kanvajournal/">
+          <i class="fa fa-instagram"></i>
+          <p>kanvajournal</p>
+        </a>
+        <a href="https://www.facebook.com/Kanva-Journal-113874657078829">
+          <i class="fa fa-facebook"></i>
+          <p>Kanva Journal</p>
+        </a>
+        <a href="mailto:kanvajournal@gmail.com">
+          <i class="fa fa-envelope-o"></i>
+          <p>kanvajournal@gmail.com</p>
+        </a>
+      </div>
     </div>
+    <div  class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-confirm  modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header justify-content-center">
+            <div class="icon-box">
+              <i class="material-icons">&#xE876;</i>
+            </div>
+           
+          </div>
+          <div class="modal-body text-center">
+            <h4>Дякуємо</h4>	
+            <p>Очікуйте відповіді від оператора</p>
+            <button class="btn btn-success" data-bs-dismiss="modal"><span>Закрити</span> </button>
+          </div>
+        </div>
+      </div>
+    </div> 
   </div>
 </body>
 </html>
