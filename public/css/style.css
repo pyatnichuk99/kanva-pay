@@ -155,7 +155,17 @@
   .contact form .full{
     grid-column: 1 / 3;
   }
-  
+  .material-icons{
+    color: #fff;
+    font-size: 40px;
+  }
+  .modal-header{
+    background-color: #198754;
+  }
+  .modal-body h4{
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
   .contact form button, .contact form input, .contact form textarea{
     width:100%;
     padding:0.5em;
@@ -169,6 +179,27 @@
     border:0;
     text-transform: uppercase;
     margin-bottom: 20px;
+    height: 50px;
+
+  }
+  .btn-success{
+    margin-top: 20px;
+  }
+  .links{
+    /* background-color: #000; */
+    padding-bottom: 10px;
+
+  }
+  .links a{
+    color: #000;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    align-items: center;
+  }
+  .links a p{
+    font-size: 12px;
   }
   
   .contact form button:hover,.contact form button:focus{
